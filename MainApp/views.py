@@ -45,5 +45,5 @@ def new_entry(request, topic_id):
 
             return redirect('MainApp:topic', topic_id=topic_id)
 
-    context =  {'form':form}
+    context =  {'form':form, 'topic':topic}
     return render(request, 'MainApp/new_entry.html', context)
